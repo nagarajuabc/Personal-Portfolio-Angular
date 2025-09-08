@@ -1,0 +1,377 @@
+/* === Importación de Fuentes === */
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+
+/* === Variables Globales === */
+:root {
+  --primary-color: #cc9a00;
+  --secondary-color: #474559;
+  --dark-bg: #0c0c0d;
+  --light-bg: #ffffff;
+  --text-dark: #212121;
+  --text-light: #5b5b5b;
+  --font-family: "Maven Pro", sans-serif;
+}
+
+/* === Globales === */
+body {
+  font-family: var(--font-family);
+  padding-top: 70px;
+  background-color: var(--light-bg);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* === Clases Reutilizables === */
+.full-screen {
+  padding: 8rem 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.small-text {
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+}
+
+/* === Botones === */
+.custom-btn {
+  background: #eee;
+  color: #5b5b5b;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 13px 29px;
+  font-size: 14px;
+  line-height: normal;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.custom-btn:hover {
+  color: var(--primary-color);
+}
+.custom-btn.custom-btn-bg {
+  background: #474559;
+  color: #ffffff;
+}
+.custom-btn.custom-btn-bg:hover {
+  background: var(--primary-color);
+  color: #ffffff !important;
+}
+
+/* === Tipografías === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 16px 0;
+  letter-spacing: -1px;
+}
+
+h1 {
+  color: var(--text-dark);
+  font-size: 2.8em;
+  margin: 24px 0;
+}
+
+h2 {
+  color: var(--text-dark);
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+h3 {
+  color: #484848;
+}
+
+h3,
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Links === */
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.4s ease;
+}
+a:hover {
+  color: var(--primary-color);
+}
+
+/* === Animaciones Globales === */
+@keyframes BottomTotop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* === Clase para Elementos Animados === */
+.animated-item {
+  font-size: 38px;
+  color: var(--primary-color);
+  opacity: 0;
+  position: absolute;
+  animation: BottomTotop 6s linear infinite;
+}
+.animated-item:nth-child(2n + 2) {
+  animation-delay: 2s;
+}
+.animated-item:nth-child(3n + 3) {
+  animation-delay: 4s;
+}
+
+/* === Modos de Color === */
+.color-mode {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.color-mode-icon {
+  position: relative;
+  right: 6px;
+}
+.color-mode-icon:after {
+ 
+  
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+}
+.color-mode-icon.active:after {
+  
+  
+  font-size: 30px;
+  color: #ffffff;
+}
+
+body.dark-mode {
+  background: #0c0c0d;
+}
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+body.dark-mode .navbar-light .navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+body.dark-mode .navbar[class*="headroom--not-top"] {
+  background: #0c0c0d;
+  border-bottom: 1px solid #1f1f1f;
+}
+body.dark-mode .small-text {
+  background: #0d0c15;
+  color: #ffffff;
+}
+body.dark-mode .feature-card .uil,
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+body.dark-mode .color-mode {
+  color: #ffffff;
+}
+
+body.dark-mode .contact .social-links h3 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .contact .social-links a {
+  color: #ffffff !important;
+}
+
+body.dark-mode .contact .social-links a:hover {
+  color: var(--primary-color) !important;
+}
+
+body.dark-mode .contact .social-links .uil {
+  color: #ffffff !important;
+}
+
+body.dark-mode .contact .social-links .uil:hover {
+  color: var(--primary-color) !important;
+}
+
+body.dark-mode .contact-form .form-control::placeholder {
+  color: #d1d1d1;
+}
+
+body.dark-mode p {
+  color: #d1d1d1;
+}
+
+body.dark-mode .custom-bullets li {
+  color: #d1d1d1;
+}
+
+body.dark-mode .project-info h3 {
+  color: #fff;
+}
+
+body.dark-mode .project-card {
+  background-color: #333;
+}
+
+/* === Utilidades === */
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+/* === Media Queries === */
+@media (min-width: 1270px) {
+  .owl-theme .owl-dots {
+    position: relative;
+    bottom: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .full-screen {
+    padding-bottom: 4rem;
+  }
+
+  .color-mode {
+    display: none;
+  }
+
+  .about-image {
+    margin-top: 4em;
+  }
+
+  .mobile-mt-2,
+  .contact-form {
+    margin-top: 2em;
+  }
+
+  .contact-info {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .animated-item {
+    font-size: 28px;
+  }
+
+  .navbar-collapse {
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding: 3px 20px;
+  }
+}
+@media (max-width: 580px) {
+  .animated-info {
+    min-width: 200px;
+  }
+  .animated-item {
+    font-size: 30px;
+  }
+
+  .custom-btn-group {
+    text-align: center;
+  }
+
+  .custom-btn {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .owl-theme .owl-nav {
+    display: none;
+  }
+
+  .timeline-info small {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}
+@media (max-width: 320px) {
+  .animated-text {
+    margin-top: 0;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .full-screen {
+    padding: 4rem 0;
+  }
+
+  .mobile-block {
+    display: block;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .social-links li {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

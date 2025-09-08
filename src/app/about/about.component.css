@@ -1,0 +1,52 @@
+/* Estilos para la sección About */
+/* Animación global */
+@keyframes BottomTotop {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animated {
+  position: relative;
+}
+
+.animated-info {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  min-width: 280px;
+  position: relative;
+}
+
+.animated-item {
+  font-size: 38px;
+  color: var(--primary-color);
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  animation: BottomTotop 6s linear infinite;
+}
+
+.animated-item:nth-child(2n + 2) {
+  animation-delay: 2s;
+}
+.animated-item:nth-child(3n + 3) {
+  animation-delay: 4s;
+}

@@ -1,0 +1,83 @@
+.contact-form {
+  position: relative;
+}
+.contact-form .form-control {
+  background: transparent;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  font-weight: bold;
+  margin: 16px 0;
+}
+.contact-form .form-control:not(textarea) {
+  height: 48px;
+}
+.contact-form .form-control:hover,
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+}
+.contact-form .submit-btn {
+  background: #cc9a00;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.contact-form .submit-btn:hover {
+  background: #474559;
+}
+
+.contact-info {
+  background: #474559;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  bottom: 8px;
+}
+.contact-info p,
+.contact-info a {
+  color: #f7f3f3;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.social-links h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #474559;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #474559;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-links a i {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+.social-links .uil {
+  color: #333333;
+  font-size: 20px;
+  display: block;
+  margin: 5px 5px;
+}
+.social-links .uil:hover {
+  color: var(--primary-color);
+}
